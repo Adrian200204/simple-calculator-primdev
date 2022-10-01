@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Primakara Calculator</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+
+  <body>
+    <div style="display: flex; justify-content: center">
+    <div>
+    <section id="display">
+      <div class="container">
+        <div class="title-box">
+          <p class="title">Primdev Calculator <span>Ver.1.0</span></p>
+        </div>
+        <input type="text" id="inputDisplay" readonly />
+      </div>
+    </section>
+
+    <section id="button">
+      <div class="container">
+        <button id="clear" onclick="inputOperation('c')">C</button>
+        <button id="delete" onclick="inputOperation('del')">DEL</button>
+        <button id="dot" onclick="inputNumber('.')">.</button>
+
+        <button id="divide" onclick="inputOperation('/')">/</button>
+
+        <button class="btn" onclick="inputNumber(7)">7</button>
+        <button class="btn" onclick="inputNumber(8)">8</button>
+        <button class="btn" onclick="inputNumber(9)">9</button>
+
+        <button id="multiply" onclick="inputOperation('x')">x</button>
+
+        <button class="btn" onclick="inputNumber(4)">4</button>
+        <button class="btn" onclick="inputNumber(5)">5</button>
+        <button class="btn" onclick="inputNumber(6)">6</button>
+
+        <button id="minus" onclick="inputOperation('-')">-</button>
+
+        <button class="btn" onclick="inputNumber(1)">1</button>
+        <button class="btn" onclick="inputNumber(2)">2</button>
+        <button class="btn" onclick="inputNumber(3)">3</button>
+
+        <button id="plus" onclick="inputOperation('+')">+</button>
+
+        <button class="btn zero" onclick="inputNumber(0)">0</button>
+        <button id="result" onclick="inputOperation('=')">=</button>
+      </div>
+    </section>
+    </div>
+    <div
+        style="
+          width: 250px;
+          margin-left: 5px;
+          background-color: rgb(255, 207, 215);
+          text-align: end;
+        "
+      >
+        <div
+          id="historyDisplay"
+          style="
+            font-family: gs-medium;
+            font-size: 15px;
+            margin: 0px;
+            padding: 0px 13px;
+            color: rgb(171, 255, 46);
+          "
+        >
+      </div>
+      </div>
+    </div>
+
+    <script src="./script.js  "></script>
+  </body>
+</html>
