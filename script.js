@@ -75,14 +75,20 @@ function clearDisplay() {
   displayOutput();
 }
 
-function addHistory(result)
-{
+function addHistory(result){
+if(localStorage.getItem("history") !== null)
+{ 
+  history =JSON.parse(localStorage.getItem("history"));
+}
+
   history.push(result);
   // simpen dalam local storage
   localStorage.setItem("history", JSON.stringify (history));
 }
 
-function readHistory()
+
+function readHistory(){
+if (localStorage.getItem("history") !== null)
 {
   const historyDisplay = document.getElementById('historyDisplay');
 
@@ -97,6 +103,7 @@ function readHistory()
   history.forEach(item => {
     historyDisplay.innerHTML += `<p>${item}</p>`;
   });
+}
 }
 readHistory();
 
